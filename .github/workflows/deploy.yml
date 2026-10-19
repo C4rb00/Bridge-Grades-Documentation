@@ -31,12 +31,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build site
-        run: mkdocs build --verbose
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+        run: mkdocs build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
