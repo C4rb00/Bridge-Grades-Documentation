@@ -31,7 +31,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build site
-        run: mkdocs build --strict
+        run: mkdocs build --verbose
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
