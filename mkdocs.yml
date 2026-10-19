@@ -1,0 +1,73 @@
+site_name: Bridge Grades Documentation
+site_description: Technical documentation for the Bridge Grades pipeline — how the bipartisanship score and letter grade for the 119th U.S. Congress are computed.
+site_url: https://C4rb00.github.io/Bridge-Grades-Documentation/
+repo_name: C4rb00/Bridge-Grades-Documentation
+repo_url: https://github.com/C4rb00/Bridge-Grades-Documentation
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Overview: index.md
+  - Main Calculation: pipeline/main-calculation.md
+  - Scored Sources:
+      - "Source A — Bills authored (cross-party cosponsor)": sources/source-a.md
+      - "Source B — Cross-party cosponsorship": sources/source-b.md
+      - "Source C — Supportive communications (count)": sources/source-c.md
+      - "Source D — Supportive communications (percent)": sources/source-d.md
+      - "Source E — Personal attacks (count)": sources/source-e.md
+      - "Source F — Personal attacks (percent)": sources/source-f.md
+  - Bonus Sources:
+      - "Source M — District partisan lean (Cook PVI)": sources/source-m.md
+      - "Source N — Member ideology (VoteView)": sources/source-n.md
+      - "Source P — Problem Solvers Caucus": sources/source-p.md
+  - Data Sources & Rosters:
+      - "Current Members": data-sources/current-members.md
+      - "Current Legislators Information": data-sources/legislators-current.md
+      - "Retired Legislators Information": data-sources/legislators-retired.md
+      - "Bill Classifications": data-sources/classifications-bills.md
+  - Scorecards:
+      - "Snapshot Scorecard": scorecards/snapshot-scorecard.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search

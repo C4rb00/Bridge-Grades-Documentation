@@ -1,0 +1,31 @@
+# MkDocs build output
+site/
+
+# Project data & notebooks — not part of the published documentation
+*.ipynb
+*.ipynb.bak
+*.bak
+.ipynb_checkpoints/
+*.xlsx
+*.xls
+*.csv
+*.zip
+
+# Source project folders (kept local, not published)
+V1_Bridge_Grades/
+Output_Files/
+Input_Files/
+Scorecards/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
