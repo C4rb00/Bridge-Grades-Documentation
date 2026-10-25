@@ -1,6 +1,9 @@
 # MkDocs build output
 site/
 
+# mkdocs-jupyter render cache
+.cache/
+
 # Project data — not part of the published documentation
 # (Source notebooks are tracked under notebooks/; their originals live in the
 #  ignored project folders below and stay out of the repo.)

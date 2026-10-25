@@ -91,4 +91,4 @@ The grade bands, relative to the chamber's distribution:
 
 Every page mirrors one Jupyter notebook and follows the same four-part structure: **Purpose · Inputs · Process · Outputs**.
 
-The source notebooks themselves are available in the [`notebooks/` folder of the repository](https://github.com/C4rb00/Bridge-Grades-Documentation/tree/main/notebooks), organized the same way as these pages.
+The source notebooks themselves are rendered in the **Notebooks** section of this site (with their code and outputs), and live in the [`docs/notebooks/` folder of the repository](https://github.com/C4rb00/Bridge-Grades-Documentation/tree/main/docs/notebooks), organized the same way as these pages.

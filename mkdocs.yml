@@ -57,6 +57,22 @@ nav:
       - "Bill Classifications": data-sources/classifications-bills.md
   - Scorecards:
       - "Snapshot Scorecard": scorecards/snapshot-scorecard.md
+  - Notebooks:
+      - "Main Calculation": notebooks/pipeline/Bridge_Grades_Calculation_V1.5.2_119.2.ipynb
+      - "Source A — Bills authored": notebooks/sources/Preprocessing_A_V1.4.0_2026_06_02.ipynb
+      - "Source B — Cross-party cosponsorship": notebooks/sources/Preprocessing_B_V1.7.0_2026_06_02.ipynb
+      - "Source C — Supportive comms (count)": notebooks/sources/Preprocessing_C_V1.0.1_2026_06_02.ipynb
+      - "Source D — Supportive comms (percent)": notebooks/sources/Preprocessing_D_V1.0.1_2026_06_02.ipynb
+      - "Source E — Personal attacks (count)": notebooks/sources/Preprocessing_E_V1.0.1_2026_06_02.ipynb
+      - "Source F — Personal attacks (percent)": notebooks/sources/Preprocessing_F_V1.0.1_2026_06_02.ipynb
+      - "Source M — District partisan lean": notebooks/sources/Preprocessing_M_V1.0.0_2026_06_02.ipynb
+      - "Source N — Member ideology": notebooks/sources/Preprocessing_N_V1.0.0_2026_06_02.ipynb
+      - "Source P — Problem Solvers Caucus": notebooks/sources/Preprocessing_P_V1.0.0_2026_06_02.ipynb
+      - "Current Members": notebooks/data-sources/Get_Current_Members.ipynb
+      - "Current Legislators Information": notebooks/data-sources/Get_Current_Legislators_Information.ipynb
+      - "Retired Legislators Information": notebooks/data-sources/Get_Retired_Legislators_Information.ipynb
+      - "Bill Classifications": notebooks/data-sources/Get_Classifications_Bills.ipynb
+      - "Snapshot Scorecard": notebooks/scorecards/Snapshot_Scorecard_2026_06_02.ipynb
 
 markdown_extensions:
   - admonition
@@ -71,3 +87,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocs-jupyter:
+      include_source: true
+      execute: false
+      no_input: false
