@@ -6,7 +6,7 @@ Technical documentation for the **Bridge Grades** pipeline — a Python project 
 
 ## What's here
 
-This repository contains the documentation site only. It is built from the Markdown in [`docs/`](docs/) with [MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme, and deployed to GitHub Pages automatically on every push to `main`.
+This repository contains the documentation site and the source notebooks. The site is built from the Markdown in [`docs/`](docs/) with [MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme, and deployed to GitHub Pages automatically on every push to `main`. The Python notebooks that each page documents live in [`notebooks/`](notebooks/), mirroring the same structure. Large data files (`.xlsx`, `.csv`) are intentionally kept out of the repository.
 
 | Section | Contents |
 |---------|----------|
@@ -16,6 +16,17 @@ This repository contains the documentation site only. It is built from the Markd
 | **Bonus Sources (M, N, P)** | The contextual adjustments |
 | **Data Sources & Rosters** | Supporting notebooks (member roster, legislator metadata, bill classifications) |
 | **Scorecards** | Comparing snapshots across dates/versions |
+
+## Source notebooks
+
+The Python (Jupyter) notebooks documented by this site are in [`notebooks/`](notebooks/):
+
+| Folder | Notebooks |
+|--------|-----------|
+| `notebooks/pipeline/` | Main Bridge Grades calculation |
+| `notebooks/sources/` | Preprocessing for sources A–F, M, N, P |
+| `notebooks/data-sources/` | Member roster, legislator metadata, bill classifications |
+| `notebooks/scorecards/` | Snapshot comparison |
 
 ## Build locally
 

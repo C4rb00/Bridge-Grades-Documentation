@@ -90,3 +90,5 @@ The grade bands, relative to the chamber's distribution:
 - **[Scorecards](scorecards/snapshot-scorecard.md)** — how snapshots from different dates/versions are compared over time.
 
 Every page mirrors one Jupyter notebook and follows the same four-part structure: **Purpose · Inputs · Process · Outputs**.
+
+The source notebooks themselves are available in the [`notebooks/` folder of the repository](https://github.com/C4rb00/Bridge-Grades-Documentation/tree/main/notebooks), organized the same way as these pages.

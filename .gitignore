@@ -1,8 +1,9 @@
 # MkDocs build output
 site/
 
-# Project data & notebooks — not part of the published documentation
-*.ipynb
+# Project data — not part of the published documentation
+# (Source notebooks are tracked under notebooks/; their originals live in the
+#  ignored project folders below and stay out of the repo.)
 *.ipynb.bak
 *.bak
 .ipynb_checkpoints/
@@ -11,11 +12,12 @@ site/
 *.csv
 *.zip
 
-# Source project folders (kept local, not published)
-V1_Bridge_Grades/
-Output_Files/
-Input_Files/
-Scorecards/
+# Source project folders (kept local, not published).
+# Anchored to the repo root so they don't match notebooks/scorecards/ etc.
+/V1_Bridge_Grades/
+/Output_Files/
+/Input_Files/
+/Scorecards/
 
 # Python
 __pycache__/
