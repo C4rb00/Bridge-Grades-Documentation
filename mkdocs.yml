@@ -38,6 +38,7 @@ theme:
 
 nav:
   - Overview: index.md
+  - Tips & Recommendations: tips-and-recommendations.md
   - Main Calculation: pipeline/main-calculation.md
   - Scored Sources:
       - "Source A — Bills authored (cross-party cosponsor)": sources/source-a.md
