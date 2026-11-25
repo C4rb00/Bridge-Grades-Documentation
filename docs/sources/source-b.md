@@ -62,3 +62,9 @@ Splitting this way lets each group be credited on its own scale, so that "joined
   - `num_cross_party_cosponsored_bills` — the credit-weighted Source B score for that legislator.
   - `num_rows` — a supporting count of contributing rows.
 - This file is consumed by the **main Bridge Grade calculation notebook**, which locates it through its `paths` dictionary, normalizes the values to a 0–100 scale (Normal CDF), applies the Source B weight (2), and folds it into the final Bridge Score and letter grade.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Preprocessing_B_V1.7.0_2026_06_02.ipynb**](../notebooks/sources/Preprocessing_B_V1.7.0_2026_06_02.ipynb)

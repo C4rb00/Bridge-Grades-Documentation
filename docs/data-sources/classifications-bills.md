@@ -51,3 +51,9 @@ A single date-stamped CSV written to the project's preprocessing-temp output fol
 The file is the original 119th-Congress bills table plus the added columns `prefix_category`, `measure_type`, the cleaned `classification`, and the merged `bill_id` / `classification_clean` (present only for measures that became law). At the end, the notebook prints the distribution of `measure_type` and `classification` values as a final check.
 
 This processed bill table is consumed downstream by the source preprocessors / master metadata that feed the main Bridge Grades calculation.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Get_Classifications_Bills.ipynb**](../notebooks/data-sources/Get_Classifications_Bills.ipynb)

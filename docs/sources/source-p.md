@@ -32,3 +32,9 @@ One CSV file, written to the shared archive under `Output_Files/Temp_Files/Temp_
 This file is read by the **main Bridge Grades calculation notebook**, which checks each House member's `bioguide_id` against this list to set the PSC flag and apply the caucus bonus on top of the weighted base score.
 
 > Note: The output filename as written in the notebook has no `.csv` extension. The content is comma-separated values regardless; this is worth flagging to the maintainers in case a `.csv` extension is expected by the main notebook's read step.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Preprocessing_P_V1.0.0_2026_06_02.ipynb**](../notebooks/sources/Preprocessing_P_V1.0.0_2026_06_02.ipynb)

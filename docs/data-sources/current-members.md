@@ -50,3 +50,9 @@ This roster feeds the source preprocessors and the master metadata table used by
 ### Relationship to `get_current_members.ipynb`
 
 A separate, earlier/alternate notebook (`Source_Files/Others/get_current_members.ipynb`) performs the same core API fetch. This notebook (`Get_Current_Members.ipynb`) is the cleaner, more polished version: it uses a dedicated, more robust name-parsing function and a tidied save step. Notably, the optional **snapshot-comparison** logic (comparing today's roster against an older one to list new and departed members) lives in the earlier `get_current_members.ipynb`, not in this notebook.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Get_Current_Members.ipynb**](../notebooks/data-sources/Get_Current_Members.ipynb)

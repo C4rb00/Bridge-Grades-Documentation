@@ -42,3 +42,9 @@ The notebook runs in Google Colab and reads these files from a shared Google Dri
   - One row per legislator, with columns: `bioguide_id`, `full_name`, `communication_count`, and `outcome_bipartisanship` (the bipartisan-communication count = Source C value).
 - The notebook's final step prints the row count as a sanity check that all expected legislators are present.
 - This Temp_C file is consumed by the **main Bridge Grades calculation notebook**, where Source C is normalized to a 0–100 scale (Normal CDF), weighted (weight 1), and combined with the other sources to produce each legislator's Bridge Score and letter grade. Higher bipartisan counts contribute to a higher score.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Preprocessing_C_V1.0.1_2026_06_02.ipynb**](../notebooks/sources/Preprocessing_C_V1.0.1_2026_06_02.ipynb)

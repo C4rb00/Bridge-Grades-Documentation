@@ -49,3 +49,9 @@ A single CSV:
 The file contains one row per current legislator with all identity fields, social-media handles, and a complete set of `<scheme>_id` identifier columns. This identifier crosswalk feeds the source preprocessors and the master metadata table used by the main Bridge Grades calculation.
 
 > **Companion notebook:** `Get_Retired_Legislators_Information.ipynb` runs the same process for *retired* legislators (reading the `data/us/retired` folder and writing `plural_retired_legislators_with_bioguide.csv`).
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Get_Current_Legislators_Information.ipynb**](../notebooks/data-sources/Get_Current_Legislators_Information.ipynb)

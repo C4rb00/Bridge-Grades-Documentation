@@ -58,3 +58,9 @@ The result is renamed to `primary_bioguide_id` and `num_bills_with_cross_party_c
   - `primary_bioguide_id` — the legislator's bioguide ID (the author).
   - `num_bills_with_cross_party_cosponsors` — the credit-weighted Source A count for that legislator.
 - This file is consumed by the **main Bridge Grade calculation notebook**, which locates it through its `paths` dictionary, normalizes the values to a 0–100 scale (Normal CDF), applies the Source A weight (3), and folds it into the final Bridge Score and letter grade.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Preprocessing_A_V1.4.0_2026_06_02.ipynb**](../notebooks/sources/Preprocessing_A_V1.4.0_2026_06_02.ipynb)

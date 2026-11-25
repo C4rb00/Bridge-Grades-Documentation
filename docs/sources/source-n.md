@@ -38,3 +38,9 @@ Two CSV files, written to the shared archive under `Output_Files/Temp_Files/Temp
 - **`Temp_N_Senate_v1.0.0_2026_06_02.csv`** — Senators, columns: `Name`, `bioguide_id`, `nominate_dim1`, `ideology_dist`.
 
 Both files are read by the **main Bridge Grades calculation notebook**, which uses `bioguide_id` to merge Source N with the other sources, converts `ideology_dist` into a percentile, and computes the centrist bonus on top of each member's weighted base score.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Preprocessing_N_V1.0.0_2026_06_02.ipynb**](../notebooks/sources/Preprocessing_N_V1.0.0_2026_06_02.ipynb)

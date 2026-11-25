@@ -44,3 +44,9 @@ Two CSV files, written to the shared archive under `Output_Files/Temp_Files/Temp
 - **`Temp_M_Senate_v1.0.0_2026_06_02.csv`** — Senators, columns: `Name`, `Chamber`, `bioguide_id`, `Party`, `PVI_Party`, `PVI_Number`, `PVI_Party_Diff`.
 
 Both files are read by the **main Bridge Grades calculation notebook**, which uses `bioguide_id` to merge Source M with the other sources and to compute the PVI bonus on top of each member's weighted base score.
+
+## 5. Notebook
+
+The Jupyter notebook this page documents — rendered in this site with its full code and outputs:
+
+[**Preprocessing_M_V1.0.0_2026_06_02.ipynb**](../notebooks/sources/Preprocessing_M_V1.0.0_2026_06_02.ipynb)
