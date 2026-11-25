@@ -5,23 +5,29 @@ repo_name: C4rb00/Bridge-Grades-Documentation
 repo_url: https://github.com/C4rb00/Bridge-Grades-Documentation
 edit_uri: edit/main/docs/
 
+extra_css:
+  - assets/brand.css
+
 theme:
   name: material
   language: en
+  logo: assets/logo-white.png
+  favicon: assets/logo.png
+  font: false
   icon:
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode

@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Bridge Grades — brand theme
+   Primary  #411259   Secondary  #A48CBD   Auxiliary  #949494
+   ========================================================================== */
+
+/* --- Typeface: system ui-sans-serif stack (Google Fonts disabled in config) --- */
+:root {
+  --bg-primary: #411259;
+  --bg-secondary: #A48CBD;
+  --bg-aux: #949494;
+  --bg-primary-dark: #2d0c3f;
+}
+body,
+input,
+.md-typeset,
+.md-header,
+.md-nav,
+.md-tabs,
+.md-footer {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
+/* --- Custom palette hooks (palette primary/accent = "custom" in mkdocs.yml) --- */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: #411259;
+  --md-primary-fg-color--light: #a48cbd;
+  --md-primary-fg-color--dark: #2d0c3f;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: #633a87;
+  --md-accent-fg-color--transparent: #633a871a;
+}
+
+/* --- Links per scheme (readable in both light and dark) --- */
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #411259;
+}
+[data-md-color-scheme="slate"] {
+  --md-typeset-a-color: #c3aed6;
+  --md-accent-fg-color: #a48cbd;
+}
+
+/* --- Auxiliary grey for dividers and table rules --- */
+.md-typeset hr {
+  border-bottom-color: color-mix(in srgb, var(--bg-aux) 55%, transparent);
+}
+.md-typeset table:not([class]) th {
+  border-bottom: 2px solid var(--bg-aux);
+}
+
+/* --- On-brand "note" admonitions (purple instead of the default blue) --- */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: #411259;
+}
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: color-mix(in srgb, #411259 12%, transparent);
+}
+.md-typeset .note > .admonition-title::before,
+.md-typeset .note > summary::before {
+  background-color: #411259;
+}
+
+/* --- Header logo sizing (keeps the badge crisp and well-spaced) --- */
+.md-header__button.md-logo img {
+  height: 1.7rem;
+  width: auto;
+}
