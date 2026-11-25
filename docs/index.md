@@ -6,6 +6,74 @@ This site documents the full methodology: every data source, every preprocessing
 
 ---
 
+## Flow
+
+*The order in which the notebooks run, and the files each one produces. The stream flows top‑to‑bottom — follow the current from the rosters down to the final scorecard.*
+
+<style>
+#bg-flow{--bgf-accent:var(--md-primary-fg-color,#3f51b5);--bgf-fg:var(--md-default-fg-color,#1b1b1f);--bgf-muted:var(--md-default-fg-color--light,#73737c);--bgf-surface:var(--md-default-bg-color,#fff);--bgf-out:#2e9e5b;font-size:.82rem;margin:1.1rem 0 1.6rem}
+#bg-flow *{box-sizing:border-box}
+#bg-flow .bgf-legend{display:flex;flex-wrap:wrap;gap:.75rem;margin:.1rem 0 1rem;font-size:.7rem;color:var(--bgf-muted)}
+#bg-flow .bgf-legend b{display:inline-flex;align-items:center;gap:.35rem;font-weight:600}
+#bg-flow .bgf-dot{width:.8rem;height:.8rem;border-radius:3px;display:inline-block;flex:0 0 auto}
+#bg-flow .bgf-stage{background:var(--bgf-surface);background:color-mix(in srgb,var(--bgf-accent) 5%,var(--bgf-surface));border:1px solid color-mix(in srgb,var(--bgf-accent) 28%,transparent);border-left:4px solid var(--bgf-accent);border-radius:10px;padding:.7rem .9rem .8rem}
+#bg-flow .bgf-head{display:flex;align-items:center;gap:.55rem;margin:0 0 .55rem;font-weight:700;color:var(--bgf-fg)}
+#bg-flow .bgf-num{flex:0 0 auto;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--bgf-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.78rem}
+#bg-flow .bgf-sub{font-weight:400;color:var(--bgf-muted);font-size:.72rem}
+#bg-flow .bgf-lane{display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .45rem;padding:.22rem 0}
+#bg-flow .bgf-nb,#bg-flow .bgf-file,#bg-flow .bgf-fin{display:inline-flex;flex-direction:column;gap:.12rem;padding:.32rem .55rem;border-radius:8px;line-height:1.25}
+#bg-flow .bgf-nb{background:var(--bgf-surface);background:color-mix(in srgb,var(--bgf-accent) 13%,var(--bgf-surface));border:1px solid color-mix(in srgb,var(--bgf-accent) 45%,transparent)}
+#bg-flow .bgf-file{background:var(--bgf-surface);border:1px dashed color-mix(in srgb,var(--bgf-fg) 38%,transparent)}
+#bg-flow .bgf-fin{background:var(--bgf-surface);background:color-mix(in srgb,var(--bgf-out) 14%,var(--bgf-surface));border:1px solid color-mix(in srgb,var(--bgf-out) 55%,transparent)}
+#bg-flow .bgf-tag{font-size:.58rem;letter-spacing:.07em;text-transform:uppercase;color:var(--bgf-muted);font-weight:700}
+#bg-flow .bgf-name{font-family:var(--md-code-font,monospace);font-size:.72rem;color:var(--bgf-fg);white-space:nowrap}
+#bg-flow .bgf-arrow{color:var(--bgf-accent);font-weight:700;flex:0 0 auto}
+#bg-flow .bgf-note{font-size:.68rem;color:var(--bgf-muted);margin:.35rem 0 0}
+#bg-flow .bgf-conn{position:relative;width:5px;height:30px;margin:3px auto;border-radius:5px;overflow:hidden;background:color-mix(in srgb,var(--bgf-accent) 22%,transparent)}
+#bg-flow .bgf-conn::after{content:"";position:absolute;left:0;right:0;top:-24px;bottom:-24px;background:repeating-linear-gradient(180deg,transparent 0 7px,color-mix(in srgb,var(--bgf-accent) 85%,#fff) 7px 15px);animation:bgf-flow 1.15s linear infinite}
+#bg-flow .bgf-conn::before{content:"\25BC";position:absolute;left:50%;bottom:-15px;transform:translateX(-50%);color:var(--bgf-accent);font-size:.7rem;z-index:1}
+@keyframes bgf-flow{to{transform:translateY(15px)}}
+@media (prefers-reduced-motion:reduce){#bg-flow .bgf-conn::after{animation:none}}
+</style>
+<div id="bg-flow">
+<div class="bgf-legend"><b><i class="bgf-dot" style="background:color-mix(in srgb,var(--bgf-accent) 45%,var(--bgf-surface));border:1px solid var(--bgf-accent)"></i>Notebook (.ipynb)</b><b><i class="bgf-dot" style="background:var(--bgf-surface);border:1px dashed currentColor"></i>Temp / intermediate file</b><b><i class="bgf-dot" style="background:var(--bgf-out)"></i>Final output</b></div>
+<div class="bgf-stage">
+<div class="bgf-head"><span class="bgf-num">1</span>Rosters &amp; data sources <span class="bgf-sub">— build the member list and metadata</span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Get_Current_Members.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">roster</span><span class="bgf-name">119th_Congress_YYYYMMDD.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Get_Current_Legislators_Information.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">metadata</span><span class="bgf-name">plural_current_legislators_with_bioguide.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Get_Retired_Legislators_Information.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">metadata</span><span class="bgf-name">plural_retired_legislators_with_bioguide.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Get_Classifications_Bills.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">bills</span><span class="bgf-name">US_119_bills_processed_YYYY-MM-DD.csv</span></span></div>
+<p class="bgf-note">Plus the attendance file <span class="bgf-name">profiles.csv</span>, used later to filter low‑attendance members.</p>
+</div>
+<div class="bgf-conn"></div>
+<div class="bgf-stage">
+<div class="bgf-head"><span class="bgf-num">2</span>Per‑source preprocessing <span class="bgf-sub">— one notebook per signal, run in any order</span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_A_V1.4.0_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_A_v1.4.0_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_B_V1.7.0_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_B_v1.7.0_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_C_V1.0.1_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_C_v1.0.1_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_D_V1.0.1_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_D_v1.0.1_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_E_V1.0.1_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_E_v1.0.1_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_F_V1.0.1_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_F_v1.0.1_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_M_V1.0.0_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_M_House_v1.0.0_2026_06_02.csv</span></span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_M_Senate_v1.0.0_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_N_V1.0.0_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_N_House_v1.0.0_2026_06_02.csv</span></span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_N_Senate_v1.0.0_2026_06_02.csv</span></span></div>
+<div class="bgf-lane"><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Preprocessing_P_V1.0.0_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-file"><span class="bgf-tag">temp</span><span class="bgf-name">Temp_P_v1.0.0_2026_06_02.csv</span></span></div>
+</div>
+<div class="bgf-conn"></div>
+<div class="bgf-stage">
+<div class="bgf-head"><span class="bgf-num">3</span>Main calculation <span class="bgf-sub">— merges every Temp file into the score &amp; grade</span></div>
+<div class="bgf-lane"><span class="bgf-file"><span class="bgf-tag">inputs</span><span class="bgf-name">Temp_A … Temp_P + roster + profiles.csv</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Bridge_Grades_Calculation_V1.5.2_119.2.ipynb</span></span></div>
+<div class="bgf-lane"><span class="bgf-arrow">&darr;</span><span class="bgf-fin"><span class="bgf-tag">output</span><span class="bgf-name">house_scores_119_YYYY-MM-DD.xlsx</span></span><span class="bgf-fin"><span class="bgf-tag">output</span><span class="bgf-name">senate_scores_119_YYYY-MM-DD.xlsx</span></span></div>
+<div class="bgf-lane"><span class="bgf-fin"><span class="bgf-tag">output</span><span class="bgf-name">congress_scores_119_separate_sheets_YYYY-MM-DD.xlsx</span></span><span class="bgf-fin"><span class="bgf-tag">output &rarr; scorecards</span><span class="bgf-name">congress_scores_119_single_sheet_YYYY-MM-DD.xlsx</span></span></div>
+</div>
+<div class="bgf-conn"></div>
+<div class="bgf-stage">
+<div class="bgf-head"><span class="bgf-num">4</span>Scorecards <span class="bgf-sub">— compares single‑sheet snapshots across dates</span></div>
+<div class="bgf-lane"><span class="bgf-file"><span class="bgf-tag">snapshots</span><span class="bgf-name">congress_scores_119_single_sheet_*.xlsx</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-nb"><span class="bgf-tag">notebook</span><span class="bgf-name">Snapshot_Scorecard_2026_06_02.ipynb</span></span><span class="bgf-arrow">&rarr;</span><span class="bgf-fin"><span class="bgf-tag">final</span><span class="bgf-name">Bridge_Grades_Snapshot_Scorecard_2026_06_02.xlsx</span></span></div>
+</div>
+</div>
+
+---
+
 ## What this project is
 
 The pipeline ingests separate, independently-measured signals of bipartisan behavior — bill authorship, cross-party cosponsorship, four communications metrics, district partisan lean, member ideology, and Problem Solvers Caucus membership — normalizes each one, combines them with fixed weights, applies three contextual bonuses, and converts the result into a published score and letter grade.
